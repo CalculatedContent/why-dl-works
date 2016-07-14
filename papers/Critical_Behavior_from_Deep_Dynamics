@@ -1,2 +1,11 @@
 Critical Behavior from Deep Dynamics: A Hidden Dimension in Natural Language
 
+http://arxiv.org/pdf/1606.06737v2.pdf
+
+
+This may be of immediate interest--it addresses exactly why Markov Chains can not treat critical / glassy phenomena
+and that deep nets are necessary
+
+In particular, it address the issue we discussed that we need slower than exponential decay
+
+
