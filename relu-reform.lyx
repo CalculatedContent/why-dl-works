@@ -234,6 +234,10 @@ and we can get something like
 \end_layout
 
 \begin_layout Standard
+We now pull the expecation back out...
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula 
 \[
 \approx\mathbb{E}[ln(exp((\mathbf{c^{T}}\mathbf{Wh})_{j})]
