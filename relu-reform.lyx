@@ -108,7 +108,7 @@ WLOG, let the bias
 
 \begin_layout Standard
 Then, for each activated node 
-\begin_inset Formula $\mathbf{z}_{i}$
+\begin_inset Formula $\mathbf{n}_{i}$
 \end_inset
 
 
@@ -117,7 +117,7 @@ Then, for each activated node
 \begin_layout Standard
 \begin_inset Formula 
 \[
-ReLu(\mathbf{z}_{j})=ln(1+exp((\mathbf{Wh})_{j})
+n_{i}=ReLu(\mathbf{z}_{j})=ln(1+exp((\mathbf{Wh})_{j})
 \]
 
 \end_inset
@@ -128,7 +128,7 @@ ReLu(\mathbf{z}_{j})=ln(1+exp((\mathbf{Wh})_{j})
 \begin_layout Standard
 \begin_inset Formula 
 \[
-ReLu(\mathbf{z}_{j})=ln(1+exp((\sum_{i}\mathbf{W_{ij}h_{i}}))
+=ln(1+exp((\sum_{i}\mathbf{W_{ij}h_{i}}))
 \]
 
 \end_inset
@@ -139,7 +139,7 @@ ReLu(\mathbf{z}_{j})=ln(1+exp((\sum_{i}\mathbf{W_{ij}h_{i}}))
 \begin_layout Standard
 \begin_inset Formula 
 \[
-ReLu(\mathbf{z}_{j})=ln(1+\prod_{i}exp((\mathbf{W_{ij}h_{i}}))
+=ln(1+\prod_{i}exp((\mathbf{W_{ij}h_{i}}))
 \]
 
 \end_inset
@@ -175,15 +175,89 @@ What if want consider
 \end_layout
 
 \begin_layout Standard
-and
+we assume that each activated node exists in a superposition of 2 states
+ [0,1]
 \end_layout
 
 \begin_layout Standard
-we assume that each activated node 
-\begin_inset Formula $\mathbf{z}_{i}$
+what I want to do is somehow get the superposition inside the log, so that
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbb{E}[Relu(\mathbf{z}_{j})]=ln(\mathbb{E}[1+exp((\mathbf{Wh})_{j}])
+\]
+
 \end_inset
 
- exists in a superposition of 2 states [0,1]
+
+\end_layout
+
+\begin_layout Standard
+this is kindof like the annealed approximation in spin glass theory–which
+ is not a great approximation, but perhaps, can give some initial insight
+\end_layout
+
+\begin_layout Standard
+from here, lets introduce an internal state vector 
+\begin_inset Formula $\mathbf{c}=[0,1]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+ln(\mathbb{E}[1+exp((\mathbf{Wh})_{j}])=ln(\mathbb{E}[exp((\mathbf{c^{T}}\mathbf{Wh})_{j}])
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and we can get something like
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbb{E}[Relu(\mathbf{z}_{j})]\approx ln(\mathbb{E}[exp((\mathbf{c^{T}}\mathbf{Wh})_{j}])
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\approx\mathbb{E}[ln(exp((\mathbf{c^{T}}\mathbf{Wh})_{j})]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\approx\mathbb{E}[\mathbf{(c^{T}}\mathbf{Wh)}{}_{j}]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So obviously this is very sloppy, but it is an attempt to get at defining
+ some kind of (linearized) free energy for each layer
 \end_layout
 
 \begin_layout Standard
