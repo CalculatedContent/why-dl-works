@@ -200,7 +200,27 @@ this is kindof like the annealed approximation in spin glass theory–which
 \end_layout
 
 \begin_layout Standard
-from here, lets introduce an internal state vector 
+that is
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbb{E}[ln\mathbf{Z}]\approx ln(\mathbb{E}[\mathbf{Z}])
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+which is not generally true for spin glasses, and why we use replica theory,
+ cavity method, etc
+\end_layout
+
+\begin_layout Standard
+Also, lets introduce an internal state vector 
 \begin_inset Formula $\mathbf{c}=[0,1]$
 \end_inset
 
