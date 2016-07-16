@@ -186,7 +186,7 @@ what I want to do is somehow get the superposition inside the log, so that
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\mathbb{E}[Relu(\mathbf{z}_{j})]=ln(\mathbb{E}[1+exp((\mathbf{Wh})_{j}])
+\mathbb{E}[Relu(\mathbf{z}_{j})]\approx ln(\mathbb{E}[1+exp((\mathbf{Wh})_{j}])
 \]
 
 \end_inset
@@ -258,10 +258,6 @@ and we can get something like
 \begin_layout Standard
 So obviously this is very sloppy, but it is an attempt to get at defining
  some kind of (linearized) free energy for each layer
-\end_layout
-
-\begin_layout Standard
-
 \end_layout
 
 \end_body
