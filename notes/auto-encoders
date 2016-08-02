@@ -1,0 +1,167 @@
+Some notes on auto-encoders and why they are interesting
+------------------------------------------------------------------
+
+
+
+VAE:  Variational Auto Encoders
+---------------------------------
+This is a very good presentation on Free Energies in Bayesian Inference
+
+http:///people.inf.ethz.ch/bkay/talks/Brodersen_2013_03_22.pdf
+
+it shows that, given a labeled data set (x), we can model exact but known distribution  p(x),
+
+ using some other , simpler  (even mean field) distribution q(x) & whatever prior info we have (here, some labels y  )
+
+using the KL divergence and the Free Energy F:
+
+             log p(x) = KL[ q(x) || p(x|y) ] + F( q, y )
+
+This leads to some obvious results, such as
+
+             min KL  <=> max F( q, y )
+
+
+This is the basis of something in Deep Learning called a Variational Auto Encoder
+(not discussed)
+
+It is frequently applied to reconstruct data  / generate fake data
+
+
+ In ML / Bayes Inference, they may call the
+
+     - Free Energy <=> Variational Lower bound on the log Likeliehood
+
+
+From Sampling to BackProp:   the Reparameterization Trick and Mean field theory
+
+In a VAE
+
+       q(x) =  (factored) gaussian distribution
+
+ So we can replace sampling with BackProp because we just need to model the means and variances
+
+
+This is a very good presentation on Free Energies in Bayesian Inference
+
+http:///people.inf.ethz.ch/bkay/talks/Brodersen_2013_03_22.pdf
+
+it shows that, given a labeled data set (x), we can model exact but known distribution  p(x),
+
+ using some other , simpler  (even mean field) distribution q(x) & whatever prior info we have (here, some labels y  )
+
+using the KL divergence and the Free Energy F:
+
+             log p(x) = KL[ q(x) || p(x|y) ] + F( q, y )
+
+This leads to some obvious results, such as
+
+             min KL  <=> max F( q, y )
+
+
+This is the basis of something in Deep Learning called a Variational Auto Encoder
+(not discussed)
+
+It is frequently applied to reconstruct data  / generate fake data
+
+
+ In ML / Bayes Inference, they may call the
+
+     - Free Energy <=> Variational Lower bound on the log Likeliehood
+
+
+From Sampling to BackProp:   the Reparameterization Trick and Mean field theory
+
+In a VAE
+
+       q(x) =  (factored) gaussian distribution
+
+ So we can replace sampling with BackProp because we just need to model the means and variancesThis is a very good presentation on Free Energies in Bayesian Inference
+
+http:///people.inf.ethz.ch/bkay/talks/Brodersen_2013_03_22.pdf
+
+it shows that, given a labeled data set (x), we can model exact but known distribution  p(x),
+
+ using some other , simpler  (even mean field) distribution q(x) & whatever prior info we have (here, some labels y  )
+
+using the KL divergence and the Free Energy F:
+
+             log p(x) = KL[ q(x) || p(x|y) ] + F( q, y )
+
+This leads to some obvious results, such as
+
+             min KL  <=> max F( q, y )
+
+
+This is the basis of something in Deep Learning called a Variational Auto Encoder
+(not discussed)
+
+It is frequently applied to reconstruct data  / generate fake data
+
+
+ In ML / Bayes Inference, they may call the
+
+     - Free Energy <=> Variational Lower bound on the log Likeliehood
+
+
+From Sampling to BackProp:   the Reparameterization Trick and Mean field theory
+
+In a VAE
+
+       q(x) =  (factored) gaussian distribution
+
+ So we can replace sampling with BackProp because we just need to model the means and variancesThis is a very good presentation on Free Energies in Bayesian Inference
+
+http:///people.inf.ethz.ch/bkay/talks/Brodersen_2013_03_22.pdf
+
+it shows that, given a labeled data set (x), we can model exact but known distribution  p(x),
+
+ using some other , simpler  (even mean field) distribution q(x) & whatever prior info we have (here, some labels y  )
+
+using the KL divergence and the Free Energy F:
+
+             log p(x) = KL[ q(x) || p(x|y) ] + F( q, y )
+
+This leads to some obvious results, such as
+
+             min KL  <=> max F( q, y )
+
+
+This is the basis of something in Deep Learning called a Variational Auto Encoder
+(not discussed)
+
+It is frequently applied to reconstruct data  / generate fake data
+
+
+ In ML / Bayes Inference, they may call the
+
+     - Free Energy <=> Variational Lower bound on the log Likeliehood
+
+
+From Sampling to BackProp:   the Reparameterization Trick and Mean field theory
+
+In a VAE
+
+       q(x) =  (factored) gaussian distribution
+
+ So we can replace sampling with BackProp because we just need to model the means and variances
+
+
+
+-------------------------------------------------------
+Samplings, Temperatute, and Annealing Scheudles::  RBMs
+
+An excellent blog:  Code and Explanation of Sampling with RBMs
+
+Great practical example of using Temperature Annealing Schedules
+
+http://colinmorris.github.io/blog/dreaming-rbms
+http://colinmorris.github.io/blog/rbm-sampling
+
+https://github.com/colinmorris/char-rbm
+
+
+
+
+
+
